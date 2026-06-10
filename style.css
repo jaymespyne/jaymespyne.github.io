@@ -1,0 +1,269 @@
+:root {
+  --ink: #2b2b2b;
+  --muted: #6b6b6b;
+  --rule: #e2e2e2;
+  --faint: #9a9a9a;         /* lighter gray, e.g. tagline */
+  --accent: #6b1f2a;        /* oxblood */
+  --accent-dark: #4a141c;   /* oxblood, hover */
+  --link: #6b1f2a;
+  --max: 760px;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 400;
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header.site {
+  padding: 44px 0 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover { color: var(--accent-dark); }
+
+nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.brand {
+  margin: 34px 0 6px;
+}
+
+.brand h1 {
+  font-family: var(--serif);
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  margin: 0;
+  color: var(--ink);
+}
+
+.brand p {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 10px 0 0;
+  font-weight: 300;
+}
+
+.brand .rule {
+  width: 64px;
+  height: 1px;
+  background: var(--accent);
+  margin: 26px auto 0;
+}
+
+/* Main */
+main {
+  padding: 40px 0 80px;
+}
+
+main h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0 0 24px;
+}
+
+main h3 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 40px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+main p { margin: 0 0 18px; }
+
+main a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+main a:hover { color: var(--accent-dark); }
+
+/* Publications + media lists */
+.pub {
+  margin: 0 0 18px;
+}
+
+.pub .title {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 2px;
+}
+
+.pub .title:hover {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent);
+}
+
+.pub .title.plain {
+  text-decoration: none;
+  cursor: default;
+}
+
+/* Featured coverage strip */
+.featured {
+  margin: 0 0 8px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.featured-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.featured p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.featured a { color: var(--link); }
+
+.pub .meta {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.pub .meta .venue { font-style: italic; }
+
+.pub .year {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Intro / lead text on interior pages */
+.lead {
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+
+/* CV embed */
+.cv-frame {
+  width: 100%;
+  height: 80vh;
+  min-height: 520px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.cv-note {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0 48px;
+  text-align: center;
+}
+
+footer.site a { color: var(--muted); text-decoration: none; }
+footer.site a:hover { color: var(--accent); }
+
+.email { font-size: 15px; margin-bottom: 14px; }
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.social a {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+/* Landing-specific */
+.landing main {
+  text-align: center;
+  padding: 60px 0 90px;
+}
+
+.landing main .intro {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.landing .selected {
+  max-width: 580px;
+  margin: 34px auto 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.landing .selected a { color: var(--link); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .brand h1 { font-size: 27px; }
+  .cv-frame { height: 78vh; }
+  nav { gap: 16px; }
+}
